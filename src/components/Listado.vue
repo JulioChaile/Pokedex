@@ -1,12 +1,5 @@
 <template>
   <div class="full-width flex justify-center">
-    <q-spinner-pie
-      v-if="!Pokemons.length"
-      color="negative"
-      size="lg"
-      class="q-mt-lg"
-    />
-
     <!-- Item pokemon de la lista -->
     <div
       v-for="p in Pokemons"

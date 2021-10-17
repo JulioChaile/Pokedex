@@ -33,7 +33,7 @@
     >
       <q-tab-panel name="listado">
         <Listado
-          :Pokemons="PokemonsComputed"
+          :Pokemons="Pokemons"
           :TiposEs="TiposEs"
           @selectPokemon="selectPokemon"
         />
@@ -150,9 +150,13 @@ export default defineComponent({
     // Pido a la api el listado de los 151 pokemons de la primera generacion
     api.get('/pokemon/?limit=151')
       .then(r => {
-        r.data.results.forEach(p => {
+        r.data.results.forEach((p, i) => {
+          this.Pokemons.push({
+            name: p.name,
+            id: p.id
+          })
           this.getPokemon(p.name).then(r => {
-            this.Pokemons.push(r)
+            this.Pokemons[i] = r
           })
         })
       })
@@ -166,23 +170,6 @@ export default defineComponent({
           }
         })
       }
-    }
-  },
-  computed: {
-    // Variable computada que devuelve el listado de pokemons ordenado y filtrado
-    PokemonsComputed () {
-      const pokemons = this.Pokemons.filter(p => p.name.includes(this.busqueda.toLowerCase()))
-
-      return pokemons.sort((a, b) => {
-        const aId = parseInt(a.id)
-        const bId = parseInt(b.id)
-
-        if (aId < bId) {
-          return -1
-        } else {
-          return 1
-        }
-      })
     }
   },
   methods: {
