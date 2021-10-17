@@ -1,0 +1,8 @@
+// app global css in SCSS form
+
+body {
+    height: 100vh;
+    width: calc(100vh * (9 / 16));
+    max-width: 100vw;
+    margin: 0 auto;
+}
