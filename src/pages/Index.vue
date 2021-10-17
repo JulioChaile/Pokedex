@@ -33,7 +33,7 @@
     >
       <q-tab-panel name="listado">
         <Listado
-          :Pokemons="Pokemons"
+          :Pokemons="Pokemons.filter(p => p.name.includes(busqueda.toLowerCase()))"
           :TiposEs="TiposEs"
           @selectPokemon="selectPokemon"
         />
