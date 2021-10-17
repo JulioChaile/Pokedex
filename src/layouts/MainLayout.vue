@@ -65,6 +65,7 @@ export default defineComponent({
   border-top-right-radius: 25px;
   width: calc(100vh * (9 / 16));
   max-width: 100vw;
+  min-width: 360px;
   margin: 0 auto;
 }
 
@@ -99,6 +100,7 @@ export default defineComponent({
   border: 5px solid black;
   width: calc(100vh * (9 / 16));
   max-width: 100vw;
+  min-width: 360px;
   margin: 0 auto;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;

@@ -353,7 +353,7 @@ export default defineComponent({
   .nombre-pokemon {
     right: 30px;
     z-index: 3000;
-    width: 150px;
+    width: calc(100% - 200px);
     height: 45px;
     top: -45px;
     font-size: 1.25rem;

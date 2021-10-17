@@ -15,7 +15,7 @@
         </span>
       </div>
       <div class="sitio_web text-caption q-mt-xl">
-        Sitio web: <a id="sitio_web" href="#">aaa.aaa.aaa</a>
+        Sitio web: <a id="sitio_web" href="https://juliochaile.github.io/PaTSUM">PaTSUM</a>
       </div>
     </div>
   </section>
